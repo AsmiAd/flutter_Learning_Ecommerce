@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutterlearningecommerce/screens/cart_screen.dart';
-import 'package:flutterlearningecommerce/screens/category_screen.dart';
-import 'package:flutterlearningecommerce/screens/favorite_screen.dart';
+import 'package:flutterlearningecommerce/screens/cart_page.dart';
+import 'package:flutterlearningecommerce/screens/favourites_page.dart';
 import 'package:flutterlearningecommerce/screens/home_screen.dart';
+import 'package:flutterlearningecommerce/screens/second_screen.dart';
+import 'package:flutterlearningecommerce/screens/view_all_products_page.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -16,10 +17,10 @@ class _MainScreenState extends State<MainScreen> {
 
   final List<Widget> screens = const [
     HomeScreen(),
-    CategoryScreen(),
-    CartScreen(),
-    FavoriteScreen(),
-    //ProfileScreen(),
+    CartPage(),
+    FavouritesPage(),
+    ViewAllProductsPage(),
+SecondProfileScreen(),
   ];
 
   void _onItemTapped(int index) {
