@@ -171,7 +171,7 @@ class _LoginPageState extends State<LoginPage> {
                         height: 48,
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            backgroundColor:  Colors.blue,
+                            backgroundColor:  Color.fromARGB(255, 177, 223, 11),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10),
                             ),
@@ -206,7 +206,7 @@ class _LoginPageState extends State<LoginPage> {
                             child: const Text(
                               "Register",
                               style: TextStyle(
-                                color: Color(0xFF4A6CF7),
+                                color: Color.fromARGB(255, 177, 223, 11),
                                 fontWeight: FontWeight.bold,
                               ),
                             ),

@@ -188,7 +188,7 @@ class _RegisterPageState extends State<RegisterPage> {
                             child: RadioListTile(
                               value: "Student",
                               groupValue: _selectedRole,
-                              activeColor: Colors.blue,
+                              activeColor: Color.fromARGB(255, 177, 223, 11),
                               title: const Text("Student"),
                               onChanged: (value) {
                                 setState(() {
@@ -201,7 +201,7 @@ class _RegisterPageState extends State<RegisterPage> {
                             child: RadioListTile(
                               value: "Teacher",
                               groupValue: _selectedRole,
-                              activeColor: Colors.blue,
+                              activeColor: Color.fromARGB(255, 177, 223, 11),
                               title: const Text("Teacher"),
                               onChanged: (value) {
                                 setState(() {
@@ -222,7 +222,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         child: ElevatedButton(
                           onPressed: _isLoading ? null : _register,
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.blueAccent,
+                            backgroundColor: Color.fromARGB(255, 177, 223, 11),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10),
                             ),
@@ -257,7 +257,7 @@ class _RegisterPageState extends State<RegisterPage> {
                             child: const Text(
                               "Login",
                               style: TextStyle(
-                                color: Colors.blueAccent,
+                                color: Color.fromARGB(255, 177, 223, 11),
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
