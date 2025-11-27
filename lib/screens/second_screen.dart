@@ -8,7 +8,6 @@ class SecondProfileScreen extends StatefulWidget {
 }
 
 class _SecondProfileScreenState extends State<SecondProfileScreen> {
-  int currentIndex = 2;
   bool showGeneralTab = true;
 
   String name = "Christina Angela";
@@ -49,7 +48,7 @@ class _SecondProfileScreenState extends State<SecondProfileScreen> {
               Navigator.pop(context);
             },
             style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.blue.shade600,
+              backgroundColor: Color.fromARGB(255, 177, 223, 11),
             ),
             child: const Text("Save", style: TextStyle(color: Colors.white)),
           ),
@@ -67,7 +66,7 @@ class _SecondProfileScreenState extends State<SecondProfileScreen> {
         builder: (context) => Scaffold(
           appBar: AppBar(
             title: const Text("Privacy Policy"),
-            backgroundColor: Colors.blue.shade600,
+            backgroundColor: Color.fromARGB(255, 177, 223, 11),
           ),
           body: const Padding(
             padding: EdgeInsets.all(20),
@@ -94,31 +93,8 @@ This is a demo privacy policy for this app.
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: _buildProfilePage(),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: currentIndex,
-        onTap: (index) {
-        setState(() => currentIndex = index);
-      },
-        selectedItemColor: Colors.blue.shade600,
-        unselectedItemColor: Colors.black54,
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home_outlined),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.swap_horiz),
-            label: 'Balance',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person_outline),
-            label: 'Account',
-          ),
-        ],
-      ),
-    );
+    return  _buildProfilePage();          
+    
   }
 
   Widget _buildProfilePage() {
@@ -165,7 +141,7 @@ This is a demo privacy policy for this app.
                 child: OutlinedButton(
                   onPressed: () {},
                   style: OutlinedButton.styleFrom(
-                    side: BorderSide(color: Colors.blue.shade600),
+                    side: BorderSide(color: Color.fromARGB(255, 177, 223, 11)),
                     padding: const EdgeInsets.symmetric(vertical: 14),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(6),
@@ -175,7 +151,7 @@ This is a demo privacy policy for this app.
                     "Become Premium",
                     style: TextStyle(
                       fontSize: 16,
-                      color: Colors.blue.shade600,
+                      color: Color.fromARGB(255, 177, 223, 11),
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -187,7 +163,7 @@ This is a demo privacy policy for this app.
                 child: Text(
                   "LOG OUT",
                   style: TextStyle(
-                    color: Colors.blue.shade600,
+                    color: Color.fromARGB(255, 177, 223, 11),
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -213,7 +189,7 @@ This is a demo privacy policy for this app.
               child: Container(
                 decoration: BoxDecoration(
                   color: showGeneralTab
-                      ? Colors.blue.shade600
+                      ? Color.fromARGB(255, 177, 223, 11)
                       : Colors.transparent,
                   borderRadius: BorderRadius.circular(10),
                 ),
@@ -236,7 +212,7 @@ This is a demo privacy policy for this app.
               child: Container(
                 decoration: BoxDecoration(
                   color: !showGeneralTab
-                      ? Colors.blue.shade600
+                      ? Color.fromARGB(255, 177, 223, 11)
                       : Colors.transparent,
                   borderRadius: BorderRadius.circular(10),
                 ),
@@ -355,7 +331,7 @@ This is a demo privacy policy for this app.
     return ListTile(
       onTap: onTap,
       contentPadding: EdgeInsets.zero,
-      leading: Icon(icon, color: Colors.blue.shade600, size: 26),
+      leading: Icon(icon, color: Color.fromARGB(255, 177, 223, 11), size: 26),
       title: Text(title, style: const TextStyle(fontWeight: FontWeight.w500)),
       subtitle: Text(subtitle, style: const TextStyle(color: Colors.grey)),
       trailing: showEdit
