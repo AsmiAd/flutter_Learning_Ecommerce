@@ -58,7 +58,7 @@ class _ViewAllProductsPageState extends State<ViewAllProductsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Catalog'),
+        title: const Text('Products'),
         backgroundColor: Colors.white,
         foregroundColor: Colors.black,
         elevation: 0,

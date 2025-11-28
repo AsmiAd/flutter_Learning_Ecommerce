@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import '../screens/product_detail_page.dart';
-import '../models/product.dart';
-import '../data/product_data.dart';
 import 'package:intl/intl.dart';
 
 class CartPage extends StatefulWidget {
