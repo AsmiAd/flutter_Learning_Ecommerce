@@ -21,19 +21,23 @@ class ProductCard extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(12),
-          boxShadow: [BoxShadow(color: Colors.black12, blurRadius: 6, offset: Offset(0,2))],
+          boxShadow: const [
+            BoxShadow(color: Colors.black12, blurRadius: 6, offset: Offset(0, 2))
+          ],
         ),
         padding: const EdgeInsets.all(10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Expanded(
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(10),
+
+            ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: AspectRatio(
+                aspectRatio: 1, 
                 child: Image.network(
                   product.productImage,
-                  width: double.infinity,
                   fit: BoxFit.cover,
+                  width: double.infinity,
                   errorBuilder: (c, s, e) => Container(
                     color: Colors.grey.shade200,
                     child: const Icon(Icons.photo, size: 48, color: Colors.grey),
@@ -41,14 +45,18 @@ class ProductCard extends StatelessWidget {
                 ),
               ),
             ),
+
             const SizedBox(height: 10),
+
             Text(
               product.productName,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
               style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
             ),
+
             const SizedBox(height: 6),
+
             Row(
               children: [
                 Text(
